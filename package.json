@@ -1,0 +1,33 @@
+{
+  "name": "design-mode",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/lib/cjs/index.cjs.js",
+  "module": "dist/lib/esm/index.esm.js",
+  "browser": "dist/lib/browser/index.umd.js",
+  "scripts": {
+    "build": "rollup -c ./build/rollup.config.js",
+    "dev": "rollup -c ./build/rollup.config.js -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build -c ./build/rollup.config.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "prettier": "^3.0.3",
+    "rollup": "^4.3.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}
